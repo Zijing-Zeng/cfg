@@ -1,0 +1,187 @@
+---
+# 语言: Cpp, ObjC, JavaScript, Proto, TableGen, TextProto
+Language: Cpp
+
+# --- 基础风格 ---
+# 所有的配置基于这个风格进行修改
+# 可选项: LLVM, Google, Chromium, Mozilla, WebKit, Microsoft
+BasedOnStyle: LLVM
+
+# --- 缩进配置 ---
+# 缩进宽度（最常用修改项，Google默认为2，这里改为4）
+IndentWidth: 4
+
+# tab 键的宽度
+TabWidth: 4
+
+# 是否使用 Tab 进行缩进
+# 可选项: Never (全空格), Always (全Tab), ForIndentation (仅缩进用Tab, 对齐用空格)
+UseTab: Never
+
+# switch 语句中的 case 标签缩进
+# true: case 缩进一级; false: case 与 switch 对齐
+IndentCaseLabels: true
+
+# 访问修饰符 (public/private/protected) 的缩进偏移
+# 默认为 1 (Google), 设置为 -4 (或与IndentWidth负值一致) 可使其与 class 关键字左对齐
+AccessModifierOffset: -4
+
+# 预处理指令 (#ifdef, #include) 的缩进
+# None: 不缩进; AfterHash: # 后缩进
+IndentPPDirectives: None
+
+# --- 行宽与换行 ---
+# 单行最大字符数限制 (0 表示不限制)
+ColumnLimit: 0
+
+# --- 大括号换行风格 (最受争议的配置) ---
+# 控制大括号 { 的位置
+# 可选项:
+#   Attach      - 左大括号在行尾 (Java/Google 风格)
+#   Allman      - 左大括号独占一行 (VS/C# 风格)
+#   Linux       - 函数大括号独占一行，其他在行尾
+#   Stroustrup  - 类似 Linux，但 else/catch 之前的 } 不换行
+#   Custom      - 配合 BraceWrapping 属性进行极其细致的自定义
+BreakBeforeBraces: Attach
+
+# --- 指针与引用对齐 ---
+# 指针 * 和引用 & 的对齐位置
+# 可选项:
+#   Left   - 靠左: int* p (现代 C++ 推荐)
+#   Right  - 靠右: int *p (C 风格)
+#   Middle - 居中: int * p
+PointerAlignment: Left
+
+# --- 排序与整理 ---
+# 自动排序 #include
+# true: 按字母顺序排序 include; false: 不排序
+SortIncludes: true
+
+# --- 空格处理细节 ---
+# 小括号 () 内侧是否加空格
+# true: ( a + b ); false: (a + b)
+SpaceInEmptyParentheses: false
+
+# 控制像 vector 或数组初始化列表 { ... } 内侧的空格
+# true  : { 1, 2, 3 }
+# false : {1, 2, 3}
+SpacesInContainerLiterals: true
+
+# 在 C 风格类型转换后是否加空格
+# true: (int) i; false: (int)i
+SpaceAfterCStyleCast: false
+
+# 赋值运算符 (=, +=, etc.) 前是否加空格
+SpaceBeforeAssignmentOperators: true
+
+# 控制圆括号 ( 之前的空格
+# ControlStatements: if/for/while 后加空格 -> if (...)
+# NonEmptyParentheses: 非空括号前加空格
+# Always: 总是加空格
+SpaceBeforeParens: ControlStatements
+
+# 模板尖括号 < > 内侧是否加空格
+# true: vector< int >; false: vector<int>
+SpacesInAngles: false
+
+# // 注释前保留的最少空格数
+SpacesBeforeTrailingComments: 2
+
+# --- 对齐特性 (强迫症福音，但会增加 Git Diff) ---
+# 连续的赋值语句是否对齐等号
+# true:
+#   int a    = 1;
+#   int long = 2;
+# false: 不对齐
+AlignConsecutiveAssignments: false
+
+# 连续的声明是否对齐变量名
+# true:
+#   int    a;
+#   double b;
+AlignConsecutiveDeclarations: false
+
+# --- 杂项 ---
+# C++ 标准版本，用于通过特定的语法特性进行优化
+# 可选项: c++11, c++14, c++17, c++20, Auto (自动检测)
+Standard: Auto
+
+# 是否允许短的函数写在一行
+# None: 不允许; Inline: 仅内联函数; Empty: 仅空函数; All: 允许
+AllowShortFunctionsOnASingleLine: Inline
+
+# 是否允许短的 if 语句写在一行
+# Never: 不允许; WithoutElse: 没有 else 时允许; Always: 总是允许
+AllowShortIfStatementsOnASingleLine: Never
+
+# 是否允许短的循环写在一行
+AllowShortLoopsOnASingleLine: false
+
+# 如果函数参数过多换行时，参数是垂直对齐还是缩进
+# true: 垂直对齐 (跟在括号后面); false: 使用缩进
+# void function(int a,
+#               int b);  <-- true
+AlignAfterOpenBracket: false
+
+# 如果设为 false，它会强制把你的矩阵变成“一竖列” (每个逗号后都换行)
+# 设为 true，它才允许你把几个数字写在一行里
+BinPackArguments: true
+
+# true (默认): 倾向于像函数参数一样打包
+# int x = {1, 2, 3, 4};
+# false: 倾向于像普通代码块一样处理 (更容易垂直排列)
+# int x = {
+#     1,
+#     2,
+#     3,
+#     4
+# };
+Cpp11BracedListStyle: true
+
+# 保留的最大连续空行数
+# 如果你手写了 5 个空行，设置为 1 后，格式化时会压缩成 1 个
+# 设置为 0 则会删除所有空行（不推荐）
+MaxEmptyLinesToKeep: 1
+
+# 是否保留块开始处的空行
+# true:
+# void f() {
+#
+#   int i;
+# }
+# false (推荐):
+# void f() {
+#   int i;
+# }
+KeepEmptyLinesAtTheStartOfBlocks: false
+
+# 自动在定义块（如函数、类、结构体）之间插入空行
+# Always: 总是插入
+# Never: 不插入
+SeparateDefinitionBlocks: Always
+
+# 访问修饰符 (public/private) 之前的空行策略
+# Always: 强制加空行 (推荐，清晰)
+# Leave: 保持原样
+# Never: 强制删除空行
+EmptyLineBeforeAccessModifier: Always
+
+# 访问修饰符之后的空行策略
+# (通常设为 Never，即 private: 下面紧接着写成员变量)
+EmptyLineAfterAccessModifier: Never
+
+---
+Language: JavaScript
+# Use 100 columns for JS.
+ColumnLimit: 100
+
+---
+Language: Proto
+# Don't format .proto files.
+DisableFormat: true
+
+---
+Language: CSharp
+# Use 100 columns for C#.
+ColumnLimit: 100
+...

@@ -1,0 +1,119 @@
+{
+  "aiAssistantIds": [
+    "paraphrase",
+    "bilingual-mix",
+    "twitter",
+    "tech",
+    "reddit",
+    "paper",
+    "news",
+    "music",
+    "medical",
+    "legal",
+    "github",
+    "game",
+    "ecommerce",
+    "financial",
+    "fiction",
+    "ao3",
+    "ebook",
+    "design",
+    "web3"
+  ],
+  "customAiAssistants": [],
+  "generalRule": {
+    "preTranslateLimiter.add": {
+      "side.enableTranslate": false
+    },
+    "subtitleRule.add": {
+      "autoEnableSubtitle": true,
+      "youtubeAutoEnableSubtitle": false
+    }
+  },
+  "inputTranslationService": "inherit",
+  "interfaceLanguage": "zh-CN",
+  "isChangedAlwaysTranslatedUrls": false,
+  "localUpdatedAt": "2025-06-09T07:54:42.983Z",
+  "modifiedBySystem": true,
+  "mouseHoverTranslationService": "inherit",
+  "pcFloatBall": {
+    "afterInstalledAt": "2023-10-28",
+    "blockUrls": [
+      "*immersivetranslate.com/preview",
+      "*.immersivetranslate.com/download-subtitle*",
+      "dash.immersivetranslate.com/*"
+    ],
+    "clickType": "translate",
+    "defaultShowGuideNums": 2,
+    "enable": true,
+    "enableSidePanel": true,
+    "fixedPosition": "right",
+    "guideBlockUrls": [
+      "https://immersivetranslate.com/accounts/login*",
+      "https://immersivetranslate.cn/accounts/login*",
+      "https://immersivetranslate.com/profile/",
+      "https://onboarding.immersivetranslate.com*"
+    ],
+    "guideContentBlockUrls": [
+      "https://onboarding.immersivetranslate.com*"
+    ],
+    "isPc": true,
+    "transparency": 30,
+    "upgradeShowLimit": 20,
+    "upgradeVisible": true
+  },
+  "pcFloatBallMainBtnTooltipShownCount": 48,
+  "subtitleTranslateService": "inherit",
+  "targetLanguage": "zh-CN",
+  "translationService": "openai",
+  "translationServiceChangedbyUserAt": "2025-06-09T07:44:50.283Z",
+  "translationServices": {
+    "openai": {
+      "APIKEY": "sk-CkICgWJ3LQwwyVumoyP0gSULs6DYF6O4mGw2WwyKjhWVNd0h",
+      "apiUrl": "https://oapi.uk/v1/chat/completions",
+      "model": "gpt-4o-mini",
+      "provider": "custom"
+    }
+  },
+  "translationTheme": "marker",
+  "translationUrlPattern": {
+    "excludeMatches": [],
+    "matches": [
+      "twitter.com",
+      "x.com",
+      "www.reddit.com",
+      "www.kadaza.com",
+      "en.wikipedia.org",
+      "*.medium.com",
+      "news.ycombinator.com"
+    ]
+  },
+  "updatedAt": "2025-06-09T07:54:42.983Z",
+  "terms": {
+    "version": 1,
+    "exportedAt": "2025-06-09T07:57:55.368Z",
+    "data": [
+      {
+        "id": "default",
+        "name": "默认术语库",
+        "author": "self",
+        "description": "默认常见术语库，包含常见术语",
+        "matches": [
+          "*"
+        ],
+        "glossaries": [
+          {
+            "k": "LLM",
+            "v": ""
+          },
+          {
+            "k": "LLMs",
+            "v": ""
+          }
+        ],
+        "order": 0,
+        "active": true
+      }
+    ]
+  }
+}

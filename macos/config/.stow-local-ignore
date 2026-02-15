@@ -1,0 +1,12 @@
+# 忽略 macOS 的垃圾文件 (.DS_Store)
+\.DS_Store
+
+# 忽略 Git 相关 (虽然通常不会把 .git 放在包里，但为了保险)
+\.git
+\.gitignore
+
+# 忽略 Stow 自己的忽略文件 (防止把它链接到家目录)
+\.stow-local-ignore
+
+# 忽略所有以 .swp 结尾的 Vim 临时文件
+.*\.swp$
